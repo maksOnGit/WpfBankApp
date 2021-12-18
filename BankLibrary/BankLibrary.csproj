@@ -44,7 +44,12 @@
     <Compile Include="CardFactory.cs" />
     <Compile Include="CreditCard.cs" />
     <Compile Include="MoneyBackCreditCard.cs" />
+    <Compile Include="MoneyBackFactory.cs" />
+    <Compile Include="PlatinumFactory.cs" />
+    <Compile Include="PlatinumCreditCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TitaniumCreditCard.cs" />
+    <Compile Include="TitaniumFactory.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

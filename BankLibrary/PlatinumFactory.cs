@@ -6,23 +6,22 @@ using System.Threading.Tasks;
 
 namespace BankLibrary
 {
-    public class TitaniumFactory : CardFactory
+    public class PlatinumFactory : CardFactory
     {
         private int _creditLimit;
         private int _annualCharge;
 
-        public TitaniumFactory(int creditLimit, int annualCharge)
+        public PlatinumFactory(int creditLimit, int annualCharge)
         {
             _creditLimit = creditLimit;
             _annualCharge = annualCharge;
         }
-        
 
         //Return concrete product/class
         public override CreditCard GetCreditCard()
         {
 
-            return new TitaniumCreditCard(_creditLimit, _annualCharge);
+            return new PlatinumCreditCard(_creditLimit, _annualCharge);
         }
     }
 }

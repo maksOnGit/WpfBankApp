@@ -19,12 +19,10 @@ namespace BankLibrary
             _creditLimit = creditLimit;
             _annualCharge = annualCharge;
         }
-
         public override string CardType
         {
             get { return _cardType; }
         }
-
         public override int CreditLimit
         {
             get { return _creditLimit; }
@@ -34,11 +32,6 @@ namespace BankLibrary
         {
             get { return _annualCharge; }
             set { _annualCharge = value; }
-
         }
-        
-           
-
-        
     }
 }

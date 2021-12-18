@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BankLibrary
 {
-    internal class CardFactory
+    public abstract class CardFactory
     {
+        public abstract CreditCard GetCreditCard();
     }
 }

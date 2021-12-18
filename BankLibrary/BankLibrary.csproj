@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="CardFactory.cs" />
     <Compile Include="CreditCard.cs" />
+    <Compile Include="MoneyBackCreditCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllCardFactory.cs" />
     <Compile Include="CardFactory.cs" />
     <Compile Include="CreditCard.cs" />
     <Compile Include="MoneyBackCreditCard.cs" />

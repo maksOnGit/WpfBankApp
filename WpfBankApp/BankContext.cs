@@ -27,27 +27,24 @@ namespace WpfBankApp
             }
         }
 
+        #region Singleton pattern, lazy loading
+        private static readonly Lazy<BankContext> _instance = new Lazy<BankContext>(() => new BankContext());
+        public static BankContext Instance
+        {
+            get { return _instance.Value; }
+        }
+        
+        #endregion
+
         private CardFactory factory = null;
-        public BankContext()
+        private BankContext()
         {
 
         }
 
         public void CreateCard(string cardType, int creditLimit, int annualCharge)
         {
-            switch (cardType.ToLower())
-            {
-                case "moneyback":
-                    factory = new MoneyBackFactory(creditLimit, annualCharge);
-                    break;
-                case "platinum":
-                    factory = new PlatinumFactory(creditLimit, annualCharge);
-                    break;
-                case "titanium":
-                    factory = new TitaniumFactory(creditLimit, annualCharge);
-                    break;
-            }
-
+            factory = new AllCardFactory(cardType, creditLimit, annualCharge);
             CreditCards.Add(factory.GetCreditCard());
         }
 

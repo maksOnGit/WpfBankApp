@@ -23,6 +23,14 @@ namespace WpfBankApp
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = BankContext.Instance;  
+        }
+
+
+        private void btnBackOffice_Click(object sender, RoutedEventArgs e)
+        {
+            BankBackOffice backOffice = new BankBackOffice();
+            backOffice.Show();
         }
     }
 }
